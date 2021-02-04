@@ -10,7 +10,9 @@ libtbx.python ensem_rmsf.py 7KRO_updated.pdb O "pml" > 7KRO_rmsfs.pml
 
 1. run water_ensem_rmsf.py on the .pdbs in order to generate the .pml files that contain the average water positions across each ensemble and their rmsfs
 
+```
 libtbx.python water_ensem_rmsf.py 7KRO_updated.pdb O
+```
 
 output: 7KRO_water_rmsfs.pml and 7KRO_water_rmsfs.csv
 
