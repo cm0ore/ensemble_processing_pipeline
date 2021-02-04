@@ -17,13 +17,11 @@ libtbx.python ensem_rmsf.py 7KRO_updated.pdb O "pml" > 7KRO_rmsfs.pml
 libtbx.python water_ensem_rmsf.py 7KRO_updated.pdb O
 ```
 
-output: 7KRO_water_rmsfs.pml and 7KRO_water_rmsfs.csv
+output: 7KRO_water.pml and 7KRO_water.csv
 
-2. run ligand_series_aligner.py with each pdb and its 7KRO_water_rmsfs.pml file in order to align all of the ensembles and their waters in the same coordinate plane. 
+2. run ligand_series_aligner.py with each pdb and its 7KRO_water.pml file in order to align all of the ensembles and their waters in the same coordinate plane. 
 
-Note: user must change
-  -path to apo .pdb and its pdb_water_rmsfs.pml and its pdb_rmsfs.pml
-  -variables "directory" and "pdb_list" (pdb_list should be a .csv with the name of each .pdb file). The pdbs and their water_rmsfs.pmls and "pdb_list" should all be in directory. The protein rmsfs for each pdb should be in directory/rmsfs
+Note: user must change paths to apo_.pdb, its apo_water.pml, and its apo_rmsfs.pml, as well as variables "directory" and "pdb_list" (pdb_list should be a .csv with the name of each .pdb file). The pdbs and their water_.pmls and "pdb_list" should all be in directory. The protein rmsfs for each pdb should be in directory/rmsfs
 
 ```
 pymol: ligand_series_aligner.py 
