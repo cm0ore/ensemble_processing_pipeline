@@ -2,7 +2,7 @@
 
 Pipeline for going from ensembles (.pdb) --> pymol session displaying: 1. the aligned and shared water coordinates across all of the ensembles 2. the protein residues within 2A of the shared waters --> .csv with list of protein residues within 2A of shared waters and their RMSFs
 
-##Order of Operation
+## Order of Operation
 
 0. run ensem_rmsf.py on the .pdbs in order to generate the .pml files that contain the residue rmsfs across each ensemble. 
 
