@@ -17,7 +17,14 @@ libtbx.python ensem_rmsf.py 7KRO_updated.pdb O "pml" > 7KRO_rmsfs.pml
 libtbx.python water_ensem_rmsf.py 7KRO_updated.pdb O
 ```
 
-output: 7KRO_water.pml and 7KRO_water.csv
+output: 7KRO_water_rmsfs.pml and 7KRO_water_rmsfs.csv
+
+
+1.5. (optional) select only the n most occupied water positions from the 7KRO_water_rmsfs.pml file. Here I'm selecting 390/750 sites.
+
+```
+cat 7KQO_water_rmsfs.pml | sort -k 6 -n | tail -n 390 | awk '{print$1 " " $2 $3 $4 $7 $8}' > 7KQO_water.pml
+```
 
 2. run ligand_series_aligner.py with each pdb and its 7KRO_water.pml file in order to align all of the ensembles and their waters in the same coordinate plane. 
 
