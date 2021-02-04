@@ -50,7 +50,7 @@ output: aligned_waters.pml and apo_only_waters.pml
 
 
 ```
-pymol: X.py
+pymol: pymol_close_protein.py
 ```
 output: close_protein_ligandbound.pdb
 
