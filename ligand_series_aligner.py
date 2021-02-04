@@ -10,9 +10,10 @@ cmd.load("/Users/cmoore4/Desktop/Tetrad_2020/Fraser_Rotation/Pymol/7KQO_rmsfs.pm
 
 def aligner(pdb):
   file_basename = os.path.basename(pdb).split('_')[0] 
+  pdb_copy = pdb
   pdb = directory+pdb
   cmd.load(pdb, file_basename)
-  cmd.load(directory+'rmsfs/'+pdb+'_rmsf.pml')
+  cmd.load(directory+'rmsfs/'+pdb_copy+'_rmsf.pml')
   cmd.load("%s%s_water.pml" % (directory, file_basename), "%s_water" % file_basename)
   cmd.select("ligand", "resi 201")
   cmd.show("sticks", "ligand")
